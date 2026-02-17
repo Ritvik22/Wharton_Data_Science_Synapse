@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 from sklearn.metrics import roc_auc_score, brier_score_loss
 
-game = pd.read_csv("new_method/whl_2025_raw.csv").groupby("game_id").agg(
+game = pd.read_csv("phase_1a/whl_2025_raw.csv").groupby("game_id").agg(
     home_team=("home_team", "first"),
     away_team=("away_team", "first"),
     home_goals=("home_goals", "sum"),
@@ -151,8 +151,8 @@ print("BOTTOM 5 (worst combinations):")
 print(df_elo_ip.tail(5).to_string(index=False))
 print()
 
-df_elo_ip.to_csv("new_method/results/weight_analysis_elo_mov_ip.csv", index=False)
-print(f"✓ Saved all 1001 combinations to: new_method/results/weight_analysis_elo_mov_ip.csv\n")
+df_elo_ip.to_csv("phase_1a/results/weight_analysis_elo_mov_ip.csv", index=False)
+print(f"✓ Saved all 1001 combinations to: phase_1a/results/weight_analysis_elo_mov_ip.csv\n")
 
 def explore_3way(name1, name2, name3, probs1, probs2, probs3, step=0.01):
     results = []
@@ -190,8 +190,8 @@ print("TOP 20 WEIGHT COMBINATIONS:")
 print(df_3way.head(20).to_string(index=False))
 print()
 
-df_3way.to_csv("new_method/results/weight_analysis_elo_mov_ip_bs.csv", index=False)
-print(f"✓ Saved all combinations to: new_method/results/weight_analysis_elo_mov_ip_bs.csv\n")
+df_3way.to_csv("phase_1a/results/weight_analysis_elo_mov_ip_bs.csv", index=False)
+print(f"✓ Saved all combinations to: phase_1a/results/weight_analysis_elo_mov_ip_bs.csv\n")
 
 print("="*80)
 print("EXHAUSTIVE 2-WAY ANALYSIS: Elo(basic) + IP")
@@ -204,8 +204,8 @@ print("TOP 20 WEIGHT COMBINATIONS:")
 print(df_elo_basic_ip.head(20).to_string(index=False))
 print()
 
-df_elo_basic_ip.to_csv("new_method/results/weight_analysis_elo_basic_ip.csv", index=False)
-print(f"✓ Saved all 1001 combinations to: new_method/results/weight_analysis_elo_basic_ip.csv\n")
+df_elo_basic_ip.to_csv("phase_1a/results/weight_analysis_elo_basic_ip.csv", index=False)
+print(f"✓ Saved all 1001 combinations to: phase_1a/results/weight_analysis_elo_basic_ip.csv\n")
 
 print("="*80)
 print("SUMMARY: OPTIMAL WEIGHTS")
@@ -242,5 +242,5 @@ print(f"\nElo(538-MOV) + IP: {len(alternatives)} near-optimal combinations")
 print(alternatives.head(10).to_string(index=False))
 
 print("\n" + "="*80)
-print("✓ All weight analysis files saved to new_method/results/")
+print("✓ All weight analysis files saved to phase_1a/results/")
 print("="*80)

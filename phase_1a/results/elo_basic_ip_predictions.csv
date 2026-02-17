@@ -1,0 +1,17 @@
+home_team,away_team,home_seed,away_seed,blend_home_prob,blend_away_prob
+brazil,kazakhstan,1,32,0.795798,0.204202
+netherlands,mongolia,2,31,0.785655,0.214345
+peru,rwanda,3,30,0.771449,0.228551
+thailand,oman,4,29,0.710265,0.289735
+pakistan,germany,5,28,0.688606,0.311394
+india,usa,6,27,0.694915,0.305085
+china,switzerland,7,26,0.680797,0.319203
+panama,canada,8,25,0.627213,0.372787
+iceland,france,9,24,0.697628,0.302372
+philippines,morocco,10,23,0.593902,0.406098
+ethiopia,saudi_arabia,11,22,0.636115,0.363885
+singapore,south_korea,12,21,0.554027,0.445973
+guatemala,new_zealand,13,20,0.533278,0.466722
+uk,mexico,14,19,0.609515,0.390485
+indonesia,uae,15,18,0.639718,0.360282
+vietnam,serbia,16,17,0.486989,0.513011

@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 from scipy.optimize import curve_fit
 
-game = pd.read_csv("new_method/whl_2025_raw.csv").groupby("game_id").agg(
+game = pd.read_csv("phase_1a/whl_2025_raw.csv").groupby("game_id").agg(
     home_team=("home_team", "first"),
     away_team=("away_team", "first"),
     home_goals=("home_goals", "sum"),
@@ -159,10 +159,10 @@ for _, row in pred_df.iterrows():
     })
 
 submission = pd.DataFrame(submission_rows)
-submission.to_csv("new_method/submission.csv", index=False)
+submission.to_csv("phase_1a/submission.csv", index=False)
 
 print("\n" + "="*70)
-print("✓ SUBMISSION CREATED: new_method/submission.csv")
+print("✓ SUBMISSION CREATED: phase_1a/submission.csv")
 print("="*70)
 print(f"Method: {W_IP:.0%} IP + {W_BS:.0%} BS (AUC-optimized)")
 print(f"  - NDCG: 0.9990 (BEST ranking quality)")
